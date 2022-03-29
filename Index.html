@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Lms Da Trapstar</title>
+
+    <style>
+        header{
+            text-align: center;
+            font-size: 50px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .mySlides{
+            display: none;
+        }
+        .w3-content{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        img{
+            width: 400px;
+        }
+        .container{
+            display: flex;
+        }
+        .container-2{
+            margin-left: 30px;
+            padding-top: 20px;
+            width: 830px;
+            height: 500px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin-left: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        ul{
+            text-align: center;
+            list-style-type: none;
+        }
+        li{
+            width: 750px;
+            border-radius: 10px;
+            height: 60px;
+            padding-top: 15px;
+            margin-bottom: 10px;
+            background-color: black;
+        }
+        li:hover{
+            background: linear-gradient(140deg, #f403d1, #64b5f6);
+            box-shadow: 0px 5px 30px rgb(0, 4, 250);
+            color: blue;
+        }
+        li a{
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background: linear-gradient(140deg, #f403d1, #64b5f6);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        @media screen and (max-width: 450px){
+            body{
+            background: linear-gradient(140deg, #f403d1, #64b5f6);
+            background-attachment: fixed;
+            background-size: cover;
+            }
+            header{
+                font-size: 30px;
+                width: 400px;
+            }
+            .container{
+                display: block;
+                width: 400px;
+            }
+            .w3-content{
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            img{
+                width: 400px;
+                margin-left: 0;
+            }
+            .container-2{
+                margin-left: 0;
+                padding-left: 0;
+                width: 400px;
+            }
+            ul{
+                padding-left: 0;
+                margin-left: 0;
+            }
+            li a{
+                font-size: 15px;
+
+            }
+            li{
+                width: 400px;
+                height: 40px;
+            }
+            h2{
+                font-size: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>Lms Da Trapstar</header>
+
+    <div class="container">
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="Lms.jpg">
+            <img class="mySlides" src="gens.jpg">
+            <img class="mySlides" src="Iphone.jpg">
+            <img class="mySlides" src="phone.jpg">
+            <img class="mySlides" src="remin.jpg">
+        </div>
+
+        <div class="container-2">
+            <h2>Hi My name is Ntokozo Mngomezulu</h2>
+            <p>You can find me on these social networks</p>
+            <ul>
+                <li><a href="www.facebook.com/lmsda.trapstarz.90">Facebook</a></li>
+                <li><a href="www.instagram.com/lms_da_trapstar">Instagram</a></li>
+                <li><a href="www.twitter.com/lms_da_trapstar">Twitter</a></li>
+                <li><a href="https://youtube.com/channel/UCj8IpJ4xKouF1IPLJ_keg_g">YouTube</a></li>
+                <li><a href="tiktok.com/@lms_da_trapstar">tiktok</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for(i=0; i<x.length; i++){
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if(myIndex > x.length){
+                myIndex = 1
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
